@@ -341,6 +341,19 @@
             "qualifiedName": "postgresql://servers/{nameSpcBodyParts[0]}:{nameSpcBodyParts[1]}/dbs/{nameSpcBodyParts[2]}/schemas/public/tables/{nameGroups[0]}",
             "purviewDataType": "postgresql_table",
             "purviewPrefix": "postgresql"
+        },
+        {
+            "name": "kusto",
+            "parserConditions": [
+                {
+                    "op1": "prefix",
+                    "compare": "=",
+                    "op2": "azurekusto"
+                }
+            ],
+            "qualifiedName": "https://{nameSpcBodyParts[0]}/{nameSpcBodyParts[1]/nameGroups[0]",
+            "purviewDataType": "azure_data_explorer_table", 
+            "purviewPrefix": "https"
         }
     ]
 }
